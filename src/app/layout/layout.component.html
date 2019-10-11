@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <div class="topnav">
+
+    <a routerLink="/">Demo App</a>
+
+    <div class="topnav-right">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a routerLink="/aboutus" routerLinkActive="active">About Us</a>
+      <a routerLink="/job" routerLinkActive="active">Jobs</a>
+      <a routerLink="/client" routerLinkActive="active">Clients</a>
+      <a routerLink="/employer" routerLinkActive="active">Employers</a>
+      <a routerLink="/contactus" routerLinkActive="active">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div style="clear: both;">&nbsp;</div>
+
+  <div class="footer">
+    <p>Subscribe to our Job Seeker Mailing List</p>
+    <div>
+      <input type="text" placeholder="Enter Your Email Address" />
+    </div>
+  </div>
+</div>

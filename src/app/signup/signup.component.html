@@ -1,0 +1,130 @@
+<h1 class="headcolor text-center" mat-dialog-title>
+  Register
+</h1>
+<form method="POST" action="" (submit)="onSubmit()" [formGroup]='signupForm' novalidate>
+  <div mat-dialog-body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 text-center">
+          <img src="assets\img/defaultuser.png" />
+          <a href="javascript:;">Upload your photo</a>
+        </div>
+        <div class="col-sm-8">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6">
+                <input placeholder="First Name" class="form-control" formControlName="first_name" required />
+                <div
+                  *ngIf="signupForm.get('first_name').invalid && (signupForm.get('first_name').dirty || signupForm.get('first_name').touched)"
+                  class="hasError">
+                  <div *ngIf="signupForm.get('first_name').hasError('required')">
+                    First Name is required.
+                  </div>
+                  <div *ngIf="signupForm.get('first_name').hasError('minlength')">
+                    First Name must be at least 4 characters long.
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <input placeholder="Last Name" class="form-control" formControlName="last_name" required />
+                <div
+                  *ngIf="signupForm.get('first_name').invalid && (signupForm.get('first_name').dirty || signupForm.get('first_name').touched)"
+                  class="hasError">
+                  <div *ngIf="signupForm.get('first_name').hasError('required')">
+                    Last Name is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input placeholder="Email" class="form-control" formControlName="email" required />
+            <div
+              *ngIf="signupForm.get('email').invalid && (signupForm.get('email').dirty || signupForm.get('email').touched)"
+              class="hasError">
+              <div *ngIf="signupForm.get('email').hasError('required')">
+                Email is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input placeholder="Phone" class="form-control" formControlName="phone" required />
+            <div
+              *ngIf="signupForm.get('first_name').invalid && (signupForm.get('first_name').dirty || signupForm.get('first_name').touched)"
+              class="hasError">
+              <div *ngIf="signupForm.get('phone').hasError('phone')">
+                Phone is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-2">
+                Age
+              </div>
+              <div class="col-sm-8">
+                <span>20</span>
+                <mat-slider min="20" max="60" step="1" value="20" formControlName="age"></mat-slider>
+                <span>60</span>
+                <div
+                  *ngIf="signupForm.get('first_name').invalid && (signupForm.get('first_name').dirty || signupForm.get('first_name').touched)"
+                  class="hasError">
+                  <div *ngIf="signupForm.get('first_name').hasError('required')">
+                    Age is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input placeholder="State" class="form-control" formControlName="state" required />
+            <div
+              *ngIf="signupForm.get('state').invalid && (signupForm.get('state').dirty || signupForm.get('state').touched)"
+              class="hasError">
+              <div *ngIf="signupForm.get('state').hasError('required')">
+                State is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input placeholder="Country" class="form-control" formControlName="country" required />
+            <div
+              *ngIf="signupForm.get('country').invalid && (signupForm.get('country').dirty || signupForm.get('country').touched)"
+              class="hasError">
+              <div *ngIf="signupForm.get('country').hasError('required')">
+                Country is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input placeholder="Address" class="form-control" formControlName="address" required />
+            <div
+              *ngIf="signupForm.get('address').invalid && (signupForm.get('address').dirty || signupForm.get('address').touched)"
+              class="hasError">
+              <div *ngIf="signupForm.get('address').hasError('required')">
+                Address is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input placeholder="Tags" class="form-control" />        
+          </div>
+          <div class="form-group">
+            <input type="checkbox" /> Subscribe to newsletter
+            <div
+              *ngIf="signupForm.get('first_name').invalid && (signupForm.get('first_name').dirty || signupForm.get('first_name').touched)"
+              class="hasError">
+              <div *ngIf="signupForm.get('first_name').hasError('required')">
+                Last Name is required.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div mat-dialog-actions class="text-right" style="float: right; padding: 20px 10px;">
+    <button class="btn btn-danger ml-2" (click)="onClose()">Cancel</button>
+    <input class="btn btn-primary ml-2" type="submit" value="Submit">
+  </div>
+</form>
