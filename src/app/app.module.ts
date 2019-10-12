@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatDialogModule } from '@angular/material';
+import { MatDialogModule, MatSnackBarModule } from '@angular/material';
 import { MatSliderModule } from '@angular/material/slider';
 
 import { AngularFireModule } from '@angular/fire';
@@ -21,6 +21,10 @@ import { ClientComponent } from './client/client.component';
 import { EmployerComponent } from './employer/employer.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
+import { ProductComponent } from './product/product.component';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { HttpClientModule } from '@angular/common/http';
     JobComponent,
     ClientComponent,
     EmployerComponent,
-    ContactusComponent,    
+    ContactusComponent,
+    LoginComponent,
+    AuthLayoutComponent,
+    ProductComponent,
+    ProductFormComponent,    
   ],
   imports: [
     BrowserModule,
@@ -44,6 +52,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     MatDialogModule,
     MatSliderModule,
+    MatSnackBarModule,
     AngularFireModule.initializeApp(environment.firebase),
  	  AngularFirestoreModule,
   ],

@@ -3,12 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { LayoutComponent } from './layout/layout.component';
-import { ProfileComponent } from './profile/profile.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { JobComponent } from './job/job.component';
-import { ClientComponent } from './client/client.component';
-import { EmployerComponent } from './employer/employer.component';
-import { ContactusComponent } from './contactus/contactus.component';
+import { LoginComponent } from './login/login.component';
+import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
+import { ProductComponent } from './product/product.component';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 const routes: Routes = [
   {
@@ -20,29 +19,27 @@ const routes: Routes = [
         component: HomeComponent,
       },
       {
-        path: 'profile',
-        component: ProfileComponent,
-      },
-      {
         path: 'aboutus',
         component: AboutusComponent,
       },
       {
-        path: 'job',
-        component: JobComponent,
-      },
+        path: 'product-forms',
+        component: ProductFormComponent,
+      }, 
       {
-        path: 'client',
-        component: ClientComponent,
-      },
+        path: 'products',
+        component: ProductComponent,
+      },      
+    ]
+  },
+  {
+    path: '',
+    component: AuthLayoutComponent,
+    children: [      
       {
-        path: 'employer',
-        component: EmployerComponent,
-      },
-      {
-        path: 'contactus',
-        component: ContactusComponent,
-      },
+        path: 'login',
+        component: LoginComponent,
+      }
     ]
   },
 ];

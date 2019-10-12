@@ -1,15 +1,14 @@
 <div class="wrapper">
   <div class="topnav">
 
-    <a routerLink="/">Demo App</a>
+    <a routerLink="/">Product Management</a>
 
     <div class="topnav-right">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-      <a routerLink="/aboutus" routerLinkActive="active">About Us</a>
-      <a routerLink="/job" routerLinkActive="active">Jobs</a>
-      <a routerLink="/client" routerLinkActive="active">Clients</a>
-      <a routerLink="/employer" routerLinkActive="active">Employers</a>
-      <a routerLink="/contactus" routerLinkActive="active">Contact Us</a>
+      <a routerLink="/product-forms" routerLinkActive="active">Product Forms</a>
+      <a routerLink="/products" routerLinkActive="active">Products</a>
+      <a href="javscript:;" (click)="logout();">Logout</a>
+      <a routerLink="/login" routerLinkActive="active">Login</a>
     </div>
   </div>
 
@@ -20,9 +19,6 @@
   <div style="clear: both;">&nbsp;</div>
 
   <div class="footer">
-    <p>Subscribe to our Job Seeker Mailing List</p>
-    <div>
-      <input type="text" placeholder="Enter Your Email Address" />
-    </div>
+    <p>Product Management System.</p>
   </div>
 </div>
