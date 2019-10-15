@@ -1,3 +1,23 @@
-<p>
-  product-form works!
-</p>
+<h1>Product Forms</h1>
+<a style="float: right;" routerLink="/addform">Add New Form</a>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th style="text-align: center;">Created</th>
+      <th style="text-align: center;">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let form of forms">
+      <td>{{form.name}}</td>
+      <td style="text-align: center;">{{form.created | date}}</td>
+      <td style="text-align: center;">
+        <a>Delete</a>
+      </td>
+    </tr>
+    <tr *ngIf="!forms || !forms.length">
+      <td colspan="3">No Record Found!!</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-product-form',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-form.component.scss']
 })
 export class ProductFormComponent implements OnInit {
+  forms = [];
+  isLoading = true;
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
+    this.getForms();
+  }
+
+  getForms() {
+    this.productService.getForms().subscribe((result: any) => {
+      this.forms = result.resData;
+      this.isLoading = false;
+    }, error => {
+      this.isLoading = false;
+    });
   }
 
 }

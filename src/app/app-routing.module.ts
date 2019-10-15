@@ -3,11 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { LayoutComponent } from './layout/layout.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
 import { LoginComponent } from './login/login.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { ProductComponent } from './product/product.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { AddformComponent } from './product-form/addform/addform.component';
 
 const routes: Routes = [
   {
@@ -17,14 +17,14 @@ const routes: Routes = [
       {
         path: '',
         component: HomeComponent,
-      },
-      {
-        path: 'aboutus',
-        component: AboutusComponent,
-      },
+      },   
       {
         path: 'product-forms',
         component: ProductFormComponent,
+      }, 
+      {
+        path: 'addform',
+        component: AddformComponent,
       }, 
       {
         path: 'products',
